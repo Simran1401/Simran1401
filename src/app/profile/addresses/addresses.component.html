@@ -1,0 +1,50 @@
+<div class="personal-col-1-2">
+  <div style="color: rgb(6, 183, 6);" *ngIf="success">{{success}}</div>
+  <div class="card address-card">
+    <p class="grey-text">Your Addresses</p>
+
+    <button class="btn add" (click)="openTheForm()">+ Add New Address</button>
+    <form class="card personal-details-card" [formGroup]="addressForm" *ngIf="FormIsVisible">
+
+      <div class="mb-3">
+        <input type="text" formControlName="name" class="form-control" id="formGroupExampleInput" placeholder="name">
+      </div>
+      <div class="mb-3">
+        <input type="text" formControlName="address" class="form-control" id="formGroupExampleInput"
+          placeholder="address">
+      </div>
+      <div class="mb-3">
+        <input type="text" formControlName="email" class="form-control" id="formGroupExampleInput" placeholder="email">
+      </div>
+      <div class="mb-3">
+        <input type="text" formControlName="city" class="form-control" id="formGroupExampleInput2" placeholder="City">
+      </div>
+      <div class="mb-3">
+        <input type="text" formControlName="state" class="form-control" id="formGroupExampleInput2" placeholder="State">
+      </div>
+      <div class="mb-3">
+        <input type="text" formControlName="phone" class="form-control" id="formGroupExampleInput2"
+          placeholder="Phone number">
+      </div>
+      <div class="mb-3">
+        <input type="text" formControlName="postcode" class="form-control" id="formGroupExampleInput2"
+          placeholder="Post Code">
+      </div>
+      <button class="btn btn-purple" (click)="addToLocalStorage()" *ngIf="!editing">Save</button>
+
+      <button class="btn btn-purple"> <a (click)="saveChanges()" *ngIf="editing" href="/profile/addresses">Save Changes
+        </a>
+      </button>
+      <div class="alert alert-danger" *ngIf="errorText"> Please fill the form properly </div>
+    </form>
+    <div class="edit" *ngFor="let address of addressesList; let i = index">
+      <p class="small-p">
+        {{address.address + ' ' + address.city + ' ' + address.state + ' ' + address.postcode }}
+      </p>
+      <div class="d-flex justify-content-end" *ngIf="addressesList.length >= 1">
+        <button class="edit-btn" (click)="editAddress(address, i)">Edit&nbsp;|</button>
+        <button class="edit-btn" (click)="removeAddress(address, i)">Remove </button>
+      </div>
+    </div>
+  </div>
+</div>

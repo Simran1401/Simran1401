@@ -1,0 +1,59 @@
+<!-- <app-home-section-one></app-home-section-one> -->
+
+<!-- PRODUCT SECTION-1 ENDS -->
+
+<!-- PRODUCT-D SECTION-2 ENDS -->
+
+<div class="product-d-section-2">
+  <div class="container product-d-co-2">
+    <h2 class="purple-text mb-4">All Products</h2>
+    <div class="row product-d-ro-2 justify-content-center">
+      <div class="col-sm-3 product-d-col-2 my-5" *ngFor="let product of ProductList; let i = index">
+        <a href="/product-page/{{product.category?.id}}/{{product.id}}" style="text-decoration: none;">
+          <img src="{{apiUrl + product.image }}" alt="" class="d-block">
+          <span class="purple-t d-block mt-2">{{ product.title }}</span>
+        </a>
+        <div class="jsb">
+          <div class="d-flex div-1">
+            <s class="purple-t" style="font-size: 15px;" *ngIf="product.discount_price">₹{{product.price}}
+            </s>
+            <sup *ngIf="product.discount_price">{{product.discount_price}}% OFF</sup>
+            <span class="purple-text">
+              ₹{{ product.discount_price != 0 ? (product.price -
+              (product.discount_price * product.price)
+              /100 | number:'1.0-0'): product.price | number:'1.0-0'}}-/</span>
+            <span class="text-p" *ngIf="product.discount_price == 0">Fixed price</span>
+          </div>
+          <div class="d-flex div-2">
+            <svg xmlns="http://www.w3.org/2000/svg" *ngIf="!addToWishList[product.id]" (click)="sendToWishList(product)"
+              width="28" fill="currentColor" class="bi bi-suit-heart-fill heart" viewBox="0 0 16 16">
+              <path
+                d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" *ngIf="addToWishList[product.id]" (click)="removeProd(product)"
+              width="28" fill="currentColor" class="bi bi-suit-heart-fill heart" style="color: #c408a2;"
+              viewBox="0 0 16 16">
+              <path
+                d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" *ngIf="!cartList[product.id]" style="cursor: pointer;" width="20"
+              (click)="sendToCart(product)" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+              <path
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" *ngIf="cartList[product.id]" width="20"
+              (click)="removeItemFromCart(product)" fill="currentColor" class="bi bi-cart-fill"
+              style="color: #c408a2; cursor: pointer" viewBox="0 0 16 16">
+              <path
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align: -webkit-center;">
+    <!-- <button class="btn btn-purple">See More</button> -->
+  </div>
+</div>

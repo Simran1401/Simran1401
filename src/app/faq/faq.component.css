@@ -1,0 +1,93 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: auto;
+}
+
+.heading {
+  padding-bottom: 20px;
+  width: 85%;
+}
+
+.purple-text {
+  /* color: #BF089E; */
+  background: linear-gradient(90deg, #C408A2 0%, #2D0235 71.01%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.faq-sec {
+  padding: 80px 20px;
+}
+
+.accordion-item {
+  background: #2D0235;
+  border-radius: 17px !important;
+  border: none;
+}
+
+.accordion-button {
+  background-color: #2D0235 !important;
+  border-radius: 17px !important;
+  color: #e6e6e6 !important;
+}
+
+.accordion-button.collapsed::after {
+
+  background: url("../../assets/imgs/fi_chevron-down.png");
+  width: 3rem;
+  background-repeat: no-repeat;
+  height: 3rem;
+  background-size: auto;
+
+}
+
+.accordion-button:not(.collapsed)::after {
+  background: url("../../assets/imgs/fi_chevron-down.png");
+  transform: rotate(-180deg);
+  width: 3rem;
+  background-repeat: no-repeat;
+  height: 3rem;
+  background-size: auto;
+}
+
+.accordion-body {
+  color: #fff;
+}
+
+.accordion {
+  margin-bottom: 20px;
+}
+
+.text-p {
+  color: #483D53;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+@media (max-width:765px) {
+  .purple-text {
+    font-size: 15px;
+  }
+
+  .text-p {
+    font-size: 11px;
+  }
+
+  .faq-sec {
+    padding: 50px 0;
+  }
+
+  .heading {
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  .accordion-button,
+  .accordion-body {
+    font-size: 12px;
+  }
+}

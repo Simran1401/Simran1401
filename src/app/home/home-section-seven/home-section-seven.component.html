@@ -1,0 +1,99 @@
+<div class="home-section-7">
+  <div class="container sec-co-7">
+    <!-- <div class="row sec-ro-7-1"  *ngFor="let partner of partnerList">
+      <div class="col-sm-8 sec-col-7-1" >
+        <h1 class="purple-text">{{partner.title}}</h1>
+        <p class="text-p">{{partner.description}}</p>
+        <a href="{{partner.link}}" target="_blank" class="btn btn-purple">Join us now</a>
+      </div>
+      <div class="col-sm-4 sec-col-7-2">
+        <img src="{{imageUrl+partner.image}}" alt="" class="sec-7-img" width="356" height="280">
+      </div>
+    </div> -->
+    <div class="row sec-ro-7-2 mt-5">
+      <div class="col-sm-4 sec-col-7-3">
+        <img src="../../../assets/imgs/Rectangle-15.webp" alt="" class="sec-7-img" width="356" height="280">
+      </div>
+      <div class="col-sm-8 sec-col-7-4">
+        <h1 class="purple-text">Become an Associate </h1>
+        <p class="text-p">Join our journey, take initiative for a change for a better world.
+        </p>
+          <button class="btn btn-purple" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="float: left;">Join Us Now!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body start-form">
+        <div class="button-box">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <h2 class="purple-text mb-4 mt-2">Become a Practitioner!</h2>
+        <form [formGroup]="practitionerForm">
+          <div class="mb-3">
+            <input type="email" class="form-control" formControlName="email" placeholder="Email">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" formControlName="phone" placeholder="Phone">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" formControlName="name" placeholder="Name">
+          </div>
+          <div class="mb-3">
+            <input type="password" class="form-control" formControlName="password" placeholder="Password">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" formControlName="country_code" placeholder="Country code">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" formControlName="course_mode" placeholder="Course mode">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" formControlName="course_level" placeholder="Course level">
+          </div>
+          <div *ngIf="errorText" class="alert alert-danger">{{ errorText }}</div>
+          <div *ngIf="successMsg" class="alert alert-success">{{ successMsg }}</div>
+          <button type="button" class="btn btn-purple w-100"
+            (click)="joinUs()">Register now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 2 -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body start-form">
+        <div class="button-box">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <h2 class="purple-text mb-4 mt-2">Become a Associate!</h2>
+        <form [formGroup]="AssociateForm">
+          <div class="mb-3">
+            <input type="text" class="form-control" formControlName="name_associate" placeholder="Name">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" formControlName="phone_associate" placeholder="Phone">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" formControlName="email_associate" placeholder="Email">
+          </div>
+          <div class="mb-3">
+            <input type="password" class="form-control" formControlName="password_associate" placeholder="Password">
+          </div>
+          <div *ngIf="errorTextAssociate" class="alert alert-danger">{{ errorTextAssociate }}</div>
+          <div *ngIf="successMsgAssociate" class="alert alert-success">{{ successMsgAssociate }}</div>
+          <button type="button" class="btn btn-purple w-100"
+            (click)="joinUsAssociate()">Register now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: auto;
+}
+
+.purple-text {
+  /* color: #BF089E; */
+  background: #690661;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.terms-and-co {
+  padding: 80px 20px;
+}
+
+.heading {
+  padding-bottom: 50px;
+  width: 85%;
+}
+
+.pointer>li::marker {
+  font-weight: bold;
+}
+
+.pointer>li {
+  padding-bottom: 30px;
+}
+
+@media (max-width:765px) {
+  .heading{
+    width: 100%;
+  }
+
+  .terms-and-co {
+    padding: 50px 0;
+  }
+}

@@ -1,0 +1,54 @@
+<div class="personal-col-1-2">
+  <p class="d-purple mb-0 d-inline">Complete your Profile & get an extra discount </p>
+  <img src="../../../assets/imgs/ph_confetti-bold.png" class="confetti" alt="">
+  <div class="progress">
+    <div class="progress-bar" [style]="'width'+':'+ number+'%'" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="personal-details text-p card personal-details-card" *ngIf="!formIsOpen">
+    <p>Name: {{details?.name}}</p>
+    <p>Username: {{details?.username}}</p>
+    <p>Email: {{details?.email}}</p>
+    <p>Phone Number: {{details?.phone}}</p>
+    <p>Date Of Birth: {{details?.date_of_birth}}</p>
+    <p>Date Of Anniversary: {{details?.date_of_anniversary}}</p>
+    <button class="btn btn-purple" style="margin: auto;" (click)="openForm()">Edit</button>
+    <div style="color: rgb(0, 149, 0); margin: auto;" *ngIf="success">{{success}}</div>
+
+  </div>
+  <form [formGroup]="persoanlDetails" class="card personal-details-card" *ngIf="formIsOpen">
+    <svg xmlns="http://www.w3.org/2000/svg" width="60" fill="currentColor" class="bi bi-person-circle"
+      viewBox="0 0 16 16">
+      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+      <path fill-rule="evenodd"
+        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+    </svg>
+
+    <div class="mb-3">
+      <input type="text" formControlName="username" class="form-control" id="formGroupExampleInput" placeholder="Username">
+    </div>
+    <div class="mb-3">
+      <input type="text" formControlName="name" class="form-control" id="formGroupExampleInput" placeholder="Name">
+    </div>
+    <div class="mb-3">
+      <input type="text" formControlName="email" class="form-control" id="formGroupExampleInput2" placeholder="Email">
+    </div>
+    <div class="mb-3">
+      <input type="text" formControlName="phone" class="form-control" id="formGroupExampleInput2" placeholder="Phone Number">
+    </div>
+    <div class="mb-3">
+      <label>Date Of Birth</label>
+      <input type="date" formControlName="date_of_birth" class="form-control" id="formGroupExampleInput2" placeholder="Date Of Birth">
+    </div>
+    <div class="mb-3">
+      <label>Date Of Anniversary</label>
+      <input type="date" formControlName="date_of_anniversary" class="form-control" id="formGroupExampleInput2" placeholder="Date Of Anniversary">
+    </div>
+  <div style="color: red;" *ngIf="error" >{{error}}</div>
+  </form>
+
+  <div class="d-flex save" *ngIf="formIsOpen">
+    <button class="btn fee-btn me-3" (click)="back()">Back</button>
+    <a href="/profile/personal-details" style="text-decoration: none; color: none;">
+    <button class="btn btn-purple" (click)="onSubmit()">Save</button></a>
+  </div>
+</div>

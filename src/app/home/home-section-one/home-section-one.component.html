@@ -1,0 +1,34 @@
+<!-- <div class="home-section-1" style="background-image: url( {{apiUrl + imageOne}} )"> -->
+<div class="home-section-1" style="background-image: url( ../../../assets/imgs/voice-ana.png)">
+  <div>
+    <app-log-in-or-sign-up style="position:absolute; z-index: 150;" (info)="backDropClicked($event)"
+      *ngIf="LogInModalOpen">
+    </app-log-in-or-sign-up>
+  </div>
+  <div class="container home-sec-co-1">
+    <div class="row">
+      <!-- <div class="col-sm-2 img-sec-1">
+        <div class="img-1">
+          <img src="{{ apiUrl + imageOne }}" alt="" style="">
+        </div>
+      </div> -->
+      <div class="col-sm-12 content-sec-1">
+        <div class="content-part-1">
+          <h2 class="purple-text" style="text-transform: capitalize;">World's first ever smart health diagnosis app</h2>
+          <br>
+          <h2 class="purple-text">In Just 30 seconds <br>
+            SCAN YOUR FULL BODY</h2>
+          <a href="https://play.google.com/store/apps/details?id=com.intelscan.intelScan&hl=en_IN&gl=US"
+            style="text-decoration: none; color: white">
+            <button class="orange-btn" (click)="openLogInmModal()">Send a voice sample</button>
+          </a>
+        </div>
+      </div>
+      <!-- <div class="col-sm-4 img-sec-2">
+        <div class="img-2">
+          <img src="{{ apiUrl + imageTwo }}" alt="" fetchpriority="high">
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="home-section-5">
+  <div class="container sec-co-5">
+    <h1 class="purple-text">Our Core Features</h1>
+    <p class="text-p">
+      The Unique Algorithm developed by Our Team following a 14 Year Research maps up the Most <br>
+      Subtle
+      Vibrations of the Body Mind,Blood and Body to generate Voice Analysis Reporting .
+    </p>
+    <div class="row sec-5-ro-1">
+      <div class="col-sm-4">
+        <div class="sec-5-col">
+          <div class="img-box">
+            <img src="../../../assets/imgs/hands-holding-dna-strand-sy_edited.webp" alt="" height="70" width="70">
+          </div>
+          <span class="d-grey">MENTAL HEALTH MAPPING </span>
+          <ul class="text-p" style="list-style-type: none;">
+            <li>Your Strong Personality Traits </li>
+            <li>Root Cause Analysis of your Current Health issues </li>
+            <li>Your Coping Up Mechanism Status </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="sec-5-col">
+          <div class="img-box">
+            <img src="../../../assets/imgs/apple.webp" alt="" height="70" width="70">
+          </div>
+          <span class="d-grey">DISEASE PROGRESS MAPPING </span>
+          <ul class="text-p" style="list-style-type: none;">
+            <li>Defining Normal Stages </li>
+            <li>Your Current Disease Stage </li>
+            <li>Further Course of Action </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="sec-5-col">
+          <div class="img-box">
+            <img src="../../../assets/imgs/imageedit_2_4277852736.webp" alt="" height="70" width="70">
+          </div>
+          <span class="d-grey">BLOOD HEALTH MAPPING </span>
+          <ul class="text-p" style="list-style-type: none;">
+            <li>Status of Body Minerals </li>
+            <li>Status of Body Electrolytes </li>
+            <li>Status of Body Hormones </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="youtubeVideo">
+      <iframe width="653" height="367" src="https://www.youtube.com/embed/FNzdWeFoqFc" title="MEET DR MAHEISH HUKMANI"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen preload="none"></iframe>
+    </div>
+    <div class="row mt-5 align-items-center" *ngFor="let mobileDat of mobileData">
+      <h2 class="purple-text mb-5">{{mobileDat.Title}}</h2>
+      <div class="col-sm-6 sec2-col-2">
+        <b class="text-p" style="font-weight: 700;">{{mobileDat.ShortDescription}}</b>
+        <p class="text-p" [innerHTML]="mobileDat.FullDescription">
+
+        </p>
+      </div>
+      <div class="col-sm-6 sec2-col-1">
+        <div class="img-sec2-2">
+          <img src="{{apiUrl+mobileDat.Image}}" alt="" width="546" height="300">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

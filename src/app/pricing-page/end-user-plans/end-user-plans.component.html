@@ -1,0 +1,16 @@
+<div class="container">
+  <h2 class="purple-text pt-3">THE INDIVIDUAL/END USER PRICING PLANS</h2>
+  <div class="row pricing-ro-5 py-5">
+    <div class="col-sm-6 pricing-col-5-1 {{i == 1? 'justify-content-start': 'justify-content-end'}}"
+      *ngFor="let plan of plans; let i = index">
+      <div class="sub-col-5-1">
+        <img src="../../assets/imgs/pricing-images/ion_pricetag.png" alt="">
+        <h3>{{plan.Name}}</h3>
+        <h3>{{plan.Price}}</h3>
+        <div [innerHtml]="plan.feature" style="text-align: start;"></div>
+        <a href="https://play.google.com/store/apps/details?id=com.intelscan.intelScan" class="btn btn-light-p">Get it
+          now</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+
+.home-section-8 {
+  padding-bottom: 80px;
+}
+
+.sec-8-img-part img {
+  width: 90%;
+  height: auto;
+}
+
+.accordion-item {
+  background: #2D0235;
+  border-radius: 17px !important;
+  border: none;
+}
+
+.accordion-button {
+  background-color: #2D0235 !important;
+  border-radius: 17px !important;
+  color: #e6e6e6 !important;
+}
+
+.accordion-body {
+  color: #fff;
+}
+
+.accordion {
+  margin-bottom: 20px;
+}
+
+.btn-purple:focus {
+  box-shadow: 0 0 0 0.25rem rgb(105 6 97 / 18%);
+}
+
+.accordion-button.collapsed::after {
+
+  background: url("../../../assets/imgs/fi_chevron-down.png");
+  width: 3rem;
+  background-repeat: no-repeat;
+  height: 3rem;
+  background-size: auto;
+
+}
+
+.accordion-button:not(.collapsed)::after {
+  background: url("../../../assets/imgs/fi_chevron-down.png");
+  transform: rotate(-180deg);
+  width: 3rem;
+  background-repeat: no-repeat;
+  height: 3rem;
+  background-size: auto;
+}
+
+.accordion-button:focus{
+  box-shadow: 0 0 0 0.25rem rgb(105 6 97 / 18%);
+  border-color: #2D0235;
+}
+
+@media (max-width:760px) {
+  .sec-8-img-part {
+      display: none;
+  }
+
+  .home-section-8 {
+      padding-bottom: 50px;
+  }
+
+  .accordion-button,
+  .accordion-body {
+      font-size: 12px;
+  }
+}

@@ -1,0 +1,323 @@
+<!-- SINGLE-PROD SECTION-1 STARTS -->
+
+<!-- <div class="contact-section-1">
+  <div class="container contact-co-1">
+    <div class="row contact-ro-1">
+      <div class="col-sm-6 contact-col-1-1">
+        <img src="../../assets/imgs/contact-images/unknown.png" alt="">
+      </div>
+      <div class="col-sm-6 contact-col-1-2">
+        <h2 class="purple-text">World's First ever Smart Health Diagnosis App In Just 30 seconds!! </h2>
+        <button class="btn orange-btn">Get Started</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- SINGLE-PROD SECTION-1 ENDS -->
+
+<!-- SINGLE-PROD SECTION-2 STARTS -->
+
+<div class="single-prod-section-2">
+  <div class="container single-prod-co-2">
+    <div class="row single-prod-ro-2">
+      <div class="col-sm-6 single-prod-col-2-1">
+        <img src="{{ apiUrl + product?.image }}" alt="">
+      </div>
+      <div class="col-sm-6 single-prod-col-2-2">
+        <h2 class="purple-text">{{product?.title}}</h2>
+
+
+        <span class="price">₹{{ product?.discount_price != 0? (product?.price -
+          (product?.discount_price * product?.price) /100 | number:'1.0-0') : product?.price | number:'1.0-0'}}/-</span>
+
+
+        <s class="purple-t" style="font-size: 15px;" *ngIf="product?.discount_price != 0">₹{{product?.price}}
+        </s>
+        <sup *ngIf="product?.discount_price != 0">{{product?.discount_price}}% OFF</sup>
+
+        <span class="text-p" *ngIf="product?.discount_price == 0">Fixed price</span>
+
+
+        <div id="single-hidden-2">
+          <div class="d-flex">
+            <button class="btn btn-purple" id="btn-purple-1" (click)="addPToCart(product)" *ngIf="!addedToList">Add to
+              cart</button>
+            <div *ngIf="addedToList" class="incdec-btn">
+              <form class="incdec">
+                <div class="value-button" id="decrease" (click)="decreaseValue(this.ProductInCart[this.id])"
+                  value="Decrease Value">-</div>
+                <input type="number" id="number" value="{{this.ProductInCart[this.id].quantity}}" />
+                <div class="value-button" id="increase" (click)="increaseValue(this.ProductInCart[this.id])"
+                  value="Increase Value">+</div>
+              </form>
+            </div>
+            <button class="btn btn-purple mx-2" id="btn-purple-2" (click)="removeProd(product)"
+              *ngIf="addToWishList[product?.id]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" class="bi bi-suit-heart-fill heart"
+                style="color: #c408a2;" viewBox="0 0 16 16">
+                <path
+                  d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
+              </svg>
+            </button>
+            <button class="btn btn-purple mx-2" id="btn-purple-2" (click)="sendToWishList(product)"
+              *ngIf="!addToWishList[product?.id]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" class="bi bi-suit-heart-fill heart"
+                viewBox="0 0 16 16">
+                <path
+                  d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
+              </svg>
+            </button>
+            <button class="btn btn-purple" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Add a review
+            </button>
+          </div>
+          <div class="d-flex share-btn">
+            <div class="main_box">
+              <input type="checkbox" id="share_button">
+              <label for="share_button">
+                <span class="sharebtn btn btn-purple" id="btn-purple-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-share-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z" />
+                  </svg>
+                </span>
+              </label>
+
+              <div class="sm_list a2a_kit a2a_kit_size_32 a2a_default_style">
+                <a class="facebook a2a_button_facebook">
+                  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path
+                      d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                  </svg> -->
+                </a>
+                <a class="a2a_button_twitter">
+                  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path
+                      d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                  </svg> -->
+                </a>
+                <a class="linkedin a2a_button_linkedin">
+                  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path
+                      d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                  </svg> -->
+                </a>
+                <a class="whatsapp a2a_button_whatsapp">
+                  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-whatsapp" viewBox="0 0 16 16">
+                    <path
+                      d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                  </svg> -->
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content two">
+          <button type="button" class="btn-close btn-close-two" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h1 class="text-center my-3 purple-text">Add Review</h1>
+          <div class="modal-body modal-body-two">
+            <form [formGroup]="reviewForm">
+              <input class="form-control mb-3" type="text" formControlName="reviewName" placeholder="name">
+              <textarea class="form-control mb-3" type="text" name="stars" formControlName="reviewDesc"
+                placeholder="description" style="height: 100px;"></textarea>
+              <div style="display:flex; justify-content:center;">
+                <a (click)="onSubmit()" href="/product-page/{{idForCat}}/{{id}}"
+                  style="text-decoration: none; position: relative; color: white;">
+                  <button data-bs-dismiss="modal" aria-label="Close" class="btn btn-purple mt-2 d-block" type="submit">
+                    Submit
+                  </button>
+                </a>
+              </div>
+              <div class="alert alert-danger" *ngIf="errorMessege">{{ errorMessege }}</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row single-prod-hidden mt-3">
+      <div class="d-flex justify-content-between">
+        <button class="btn btn-purple" id="btn-purple-1" (click)="addPToCart(product)" *ngIf="!addedToList">Add
+          to cart</button>
+        <div *ngIf="addedToList" class="incdec-btn">
+          <form class="incdec">
+            <div class="value-button" id="decrease" (click)="decreaseValue(this.ProductInCart[this.id])"
+              value="Decrease Value">-</div>
+            <input type="number" id="number" value="{{this.ProductInCart[this.id].quantity}}" />
+            <div class="value-button" id="increase" (click)="increaseValue(this.ProductInCart[this.id])"
+              value="Increase Value">+</div>
+          </form>
+        </div>
+        <button class="btn btn-purple" id="btn-purple-2">
+          <svg xmlns="http://www.w3.org/2000/svg" *ngIf="addToWishList[product?.id]" (click)="removeProd(product)"
+            width="20" fill="currentColor" class="bi bi-suit-heart-fill heart" style="color: #c408a2;"
+            viewBox="0 0 16 16">
+            <path
+              d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" *ngIf="!addToWishList[product?.id]" (click)="sendToWishList(product)"
+            width="20" fill="currentColor" class="bi bi-suit-heart-fill heart" viewBox="0 0 16 16">
+            <path
+              d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
+          </svg>
+        </button>
+        <button class="btn btn-purple" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Add a review
+        </button>
+      </div>
+      <div class="d-flex ">
+        <div class="d-flex share-btn">
+          <div class="main_box">
+            <input type="checkbox" id="share_button1">
+            <label for="share_button1" class="d-block">
+              <span class="sharebtn btn btn-purple text-center" style="margin: auto" id="btn-purple-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-share-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z" />
+                </svg>
+              </span>
+            </label>
+
+            <div class="sm_list a2a_kit a2a_kit_size_32 a2a_default_style">
+              <a class="facebook a2a_button_facebook">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-facebook" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                </svg> -->
+              </a>
+              <a class="a2a_button_twitter">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-instagram" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                </svg> -->
+              </a>
+              <a class="linkedin a2a_button_linkedin">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-linkedin" viewBox="0 0 16 16">
+                  <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                </svg> -->
+              </a>
+              <a class="whatsapp a2a_button_whatsapp">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-whatsapp" viewBox="0 0 16 16">
+                  <path
+                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                </svg> -->
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row single-prod-ro-2-1">
+      <div class="col-sm-12 single-prod-col-2-3" [innerHTML]="product?.description">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SINGLE-PROD SECTION-2 ENDS -->
+
+<!-- SINGLE-PROD SECTION-3 STARTS -->
+
+<div class="home-section-6">
+  <div class="container sec-co-6">
+    <h4 class="purple-text" style="text-align: left;">Product Reviews</h4>
+    <div class="row">
+      <h2 *ngIf="product?.product_review.length <= 0"> No reviews on this product yet!!</h2>
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"
+        *ngIf="product?.product_review.length > 0">
+        <div class="carousel-inner">
+          <div class="carousel-item {{i==0? 'active': ''}}" *ngFor="let item of product.product_review; let i = index">
+            <div class="row">
+              <div class="col-sm-4 img-sec-6-box">
+                <img src="../../assets/imgs/product-images/Ellipse 1.png" class="d-block img-sec-6-1" alt="">
+                <img src="../../assets/imgs/Ellipse 1.png" class="img-sec-6-2" alt="">
+              </div>
+              <div class="col-sm-8 mcb">
+                <div class="content-sec-6-part">
+                  <p class="text-p"> {{item.comments}}
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <p class="purple-p">{{ item.name }}</p>
+                      <!-- <p class="text-p">Their Designation </p> -->
+                    </div>
+                    <div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" fill="currentColor" class="bi bi-chevron-left"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+            </svg>
+          </span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" fill="currentColor" class="bi bi-chevron-right"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SINGLE-PROD SECTION-3 ENDS -->
+
+<!-- SINGLE-PROD SECTION-4 STARTS -->
+
+
+
+<div class="home-section-7" *ngIf="recommendationProd?.length >= 3">
+  <div class="container sec-co-6">
+    <h4 class="purple-text" style="text-align: left;">Similar Products</h4>
+    <div class="row mt-5">
+      <div class="col-12">
+        <ngx-slick-carousel class="carousel d-flex" #slickModal="slick-carousel" [config]="slideConfig">
+          <div ngxSlickItem *ngFor="let recomProd of recommendationProd; let i = index" class="slide">
+            <div class="row">
+              <div class="col-sm-12 similar">
+                <a style="text-decoration: none;" id="similarProd"
+                  href="/product-page/{{recomProd.category?.id}}/{{recomProd.id}}">
+                  <img src="{{ apiUrl + recomProd.image }}" class="d-block w-100" alt="...">
+                  <p class="text-p" [innerHTML]="recomProd.description | shortLength: 150"></p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </ngx-slick-carousel>
+      </div>
+    </div>
+  </div>
+</div>

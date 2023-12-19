@@ -1,0 +1,36 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: auto;
+}
+
+
+.purple-text {
+  /* color: #BF089E; */
+  background: linear-gradient(90deg, #C408A2 0%, #2D0235 71.01%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.heading {
+  padding-bottom: 50px;
+  width: 85%;
+}
+
+.disclaimer {
+  padding: 80px 20px;
+}
+
+
+@media (max-width:765px) {
+  .heading {
+    width: 100%;
+  }
+
+  .disclaimer {
+    padding: 50px 0;
+  }
+}

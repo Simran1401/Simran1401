@@ -1,0 +1,22 @@
+<div class="personal-col-1-2">
+    <div class="card order-card">
+        <p class="grey-text">Your Orders</p>
+        <div class="column-1"  *ngFor="let order of Orders">
+          <p class="text-p mb-0"> Order<b># {{ order.id }}</b></p>
+            <div class="row-1 po-img" *ngFor="let cartItem of order.carts">
+                <img src="../../../assets/imgs/pexels-sinitta-leunen-11860376.jpg" alt="">
+                <div class="d-flex ms-3 my-3">
+                    <div>
+                        <b class="black-p">{{ cartItem.title }}</b>
+                        <p class="black-s-p mb-0" [innerHTML]="cartItem.description | shortLength: 50"></p>
+                        <b>{{ cartItem.qty }} Qty | ₹{{ cartItem.price }}</b>
+                        <p class="text-p mb-0">Delivered on: 30th August</p>
+                    </div>
+                    <div class="order-no">
+                        <p class="text-p mb-0">Order Placed: {{ order.date_time | date }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,254 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.workshop-form {
+  background: #FFFFFF;
+  box-shadow: 0px 10px 34px rgba(0, 0, 0, 0.3);
+  border-radius: 14px;
+  width: 90%;
+  margin: auto;
+  padding: 30px 50px;
+}
+
+.workshop-form .form-control,
+.workshop-form .form-select {
+  border: 1px solid #2D0235;
+  border-radius: 6px;
+}
+
+.btn-purple:focus {
+  box-shadow: 0 0 0 0.25rem rgb(105 6 97 / 18%);
+}
+
+.rtech-section-1 {
+  padding: 50px 0 80px 0;
+}
+
+
+.workshop-d-section-6 {
+  padding-bottom: 80px;
+}
+
+.rtech-col-1-1 {
+  text-align: right;
+}
+
+
+
+
+.practitioner-form {
+  width: 75%;
+  background: linear-gradient(90.42deg, #690661 0.35%, #2D0235 99.63%);
+  box-shadow: 0px 8px 15px rgb(0 0 0 / 60%);
+  border-radius: 14px;
+  color: #fff;
+}
+.practitioner-form .col-md-4 {
+  width: 33%;
+}
+
+.fee-btn {
+  border: 2px solid #2D0235;
+  border-radius: 10px;
+  background: transparent;
+  padding: 5px 30px;
+  color: #2D0235;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.btn-purple {
+  background: #690661;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 10px;
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  height: 40px;
+  color: #FFFFFF;
+  padding: 0 20px;
+}
+
+.btn-purple:hover {
+  color: #fff;
+  transition: 0.2s;
+  filter: none;
+}
+
+.black-text {
+  color: #2D0235;
+  font-size: 30px;
+  font-weight: 700;
+}
+#sec-2-hidden-img {
+  display: none;
+}
+
+.square-img {
+  width: 100%;
+  box-shadow: 0px 4px 15px rgb(0 0 0 / 25%);
+  border-radius: 25px;
+  height: 430px;
+  object-fit: cover;
+}
+
+.practitioner-form .black-text {
+  color: #fff;
+}
+
+.practitioner-form .form-control,
+.practitioner-form .form-select {
+  border: 1px solid #fff;
+  background: transparent;
+
+}
+
+.practitioner-section-5 {
+  padding-bottom: 50px;
+}
+
+.workshop-d-section-4,
+.workshop-d-section-5 {
+    padding-bottom: 50px;
+}
+.black-p {
+  color: #000000;
+  font-size: 18px;
+}
+.pract-card-5 {
+  border: none;
+  background: linear-gradient(90.42deg, #690661 0.35%, #2D0235 99.63%);
+  box-shadow: 0px 8px 15px rgb(0 0 0 / 60%);
+  border-radius: 14px;
+  padding: 30px;
+  width: 70%;
+  margin: auto;
+  color: #fff;
+}
+
+.pract-card-5 .table {
+  width: 100%;
+  margin: auto;
+  border: 2px solid #FFFFFF;
+  color: #fff;
+}
+
+.workshop-d-col-4 {
+  text-align: center;
+  padding-right: 50px;
+  padding-left: 50px;
+  /* align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+
+.workshop-d-col-4 img {
+  width: 30%;
+}
+
+.workshop-d-col-4 div {
+  height: 100px;
+}
+
+.practitioner-form .form-check-input {
+  border-radius: 0;
+  background: transparent;
+  border: 1px solid #fff;
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.25rem rgb(47 2 54 / 32%);
+}
+
+.practitioner-form .fee-btn {
+  border-color: #fff;
+  color: #fff;
+}
+
+.rtech-col-1-1 img {
+  width: 70%;
+}
+.purple-text {
+  /* color: #BF089E; */
+  background: linear-gradient(90deg, #c408a2 19.48%, #2d0235 81.71%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  font-size: 30px;
+  font-weight: 700;
+}
+.rtech-col-1-3 img {
+  width: 100%;
+}
+
+.orange-btn {
+  background: linear-gradient(180deg, #FF9A47 0%, #9A3659 99.99%, #690661 100%);
+  border-radius: 10px;
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
+  color: #FFFFFF;
+  font-size: 18px;
+  border: none;
+  padding: 0 20px;
+  height: 40px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.orange-btn:hover {
+  filter: none;
+  transition: 0.2s;
+  color: #fff;
+}
+
+@media (max-width:760px) {
+  .rtech-col-1-2 {
+    width: 50%;
+    padding-right: 0;
+    text-align: left !important;
+}
+  .rtech-col-1-1 {
+    display: none;
+}
+}
+
+
+
+.about-section-2 {
+  padding-bottom: 80px;
+}
+
+#sec-2-hidden-img {
+  display: none;
+}
+
+@media (max-width:992px) {
+  .about-col-2-2 img {
+      width: 100%;
+  }
+}
+
+@media (max-width:760px) {
+
+  .about-section-2 {
+      padding-bottom: 50px;
+  }
+
+  .about-col-2-1 {
+      width: 100%;
+  }
+
+  .about-col-2-2 {
+      display: none;
+  }
+
+  #sec-2-hidden-img {
+      display: block;
+      width: 50%;
+  }
+}

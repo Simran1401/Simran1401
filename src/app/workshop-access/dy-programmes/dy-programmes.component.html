@@ -1,0 +1,25 @@
+<div class="container" style="margin: auto;">
+  <h2 class="my-5" *ngIf="programme.length <= 0">Not available right at the moment. <br> Please come back later!!</h2>
+  <div *ngIf="programme.length >0">
+    <div *ngFor="let program of programme" class="mb-5 card">
+      <div class="text-center" style="margin: 70px 0 50px;">
+        <img src="{{ apiUrl + program.Image }}" class="img-1" alt="">
+      </div>
+      <div class="px-5">
+        <h2 class="purple-text">{{ program.Title }}</h2>
+        <p class="text-p">{{ program.Description }}</p>
+        <div>
+          <p class="fw-bolder">{{ program.PC }} Participant</p>
+          <p class="fw-bolder border-top border-dark">₹ {{ program.price }}/-</p>
+          <a href="https://jvscan0702.ongraphy.com/courses/Becoming-a-Certified-Jv-scan-Practitioner-62f37ac6e4b083a48a023ec8"
+            class="btn btn-purple">Join</a>
+        </div>
+        <div>
+          <h2 class="purple-text">About</h2>
+          <p class="text-p" [innerHTML]="program.FullDescription">
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

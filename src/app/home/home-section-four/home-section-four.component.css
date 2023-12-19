@@ -1,0 +1,136 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.home-section-4 {
+  padding-bottom: 80px;
+}
+
+.img-4-1 {
+  margin-top: -45px;
+  width: 65%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.img-sec-4 {
+  text-align: center;
+}
+
+.sec-4-col-1 {
+  padding: 0 10px 0 50px;
+  text-align: right;
+}
+
+.sec-4-col-1 .purple-text {
+  margin-bottom: 20px;
+}
+
+#hidden-1 {
+  display: none;
+}
+
+.playstore-btn {
+  display: flex;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.playstore-btn a {
+  width: 100%;
+}
+
+.playstore-btn a img {
+  width: 50%;
+  height: 100%;
+}
+
+.purple-text {
+  /* color: #BF089E; */
+  background: linear-gradient(90deg, #C408A2 19.48%, #2D0235 81.71%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.btn-purple:focus {
+  box-shadow: 0 0 0 0.25rem rgb(105 6 97 / 18%);
+}
+
+@media (min-width:992px) {
+  .a-1 {
+    margin-right: -200px;
+    margin-left: 0;
+  }
+
+  .playstore-btn {
+    justify-content: center;
+  }
+}
+
+@media (max-width:992px) {
+  .sec-4-col-1 {
+    padding: 0 20px 0 20px;
+  }
+
+  .img-4-1 {
+    width: 100%;
+  }
+
+  .a-1 {
+    margin-right: -150px;
+  }
+}
+
+@media (max-width:760px) {
+
+  .home-section-4 {
+    padding-bottom: 50px;
+  }
+
+  .playstore-btn a img {
+    width: 80%;
+  }
+
+  .a-1 {
+    margin-right: 0;
+  }
+
+  .purple-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width:575px) {
+  #hidden-2 {
+    display: none;
+  }
+
+  #hidden-1 {
+    display: block;
+  }
+
+  .sec-4-col-1 {
+    width: 50%;
+    padding-right: 0;
+    padding-left: 10px;
+  }
+
+  .sec-4-col-2 {
+    width: 50%;
+    padding: 0;
+    padding-left: 2px;
+  }
+
+  .img-4-1 {
+    margin-top: 0;
+  }
+
+  .text-p {
+    font-size: 11px;
+  }
+}

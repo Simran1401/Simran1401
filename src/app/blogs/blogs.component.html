@@ -1,0 +1,66 @@
+<!-- PRODUCT SECTION-1 STARTS -->
+
+<!-- <div>
+  <app-log-in-or-sign-up style="position:absolute; z-index: 150;" (info)="backDropClicked($event)"
+    *ngIf="LogInModalOpen">
+  </app-log-in-or-sign-up>
+</div> -->
+
+<!-- <app-home-section-one></app-home-section-one> -->
+
+
+
+<!-- <div class="home-section-1">
+  <div class="container home-sec-co-1">
+    <div class="row">
+      <div class="col-sm-2 img-sec-1">
+        <div class="img-1">
+          <img src="../../assets/imgs/product-images/Frame.png" alt="">
+        </div>
+      </div>
+      <div class="col-sm-6 content-sec-1">
+        <div class="content-part-1 text-center">
+          <h2 class="purple-text">
+            World's First ever Smart Health Diagnosis App In Just 30 seconds!!
+          </h2>
+          <button class="btn orange-btn" (click)="openModal()">Get Started</button>
+        </div>
+      </div>
+      <div class="col-sm-4 img-sec-2">
+        <div class="img-2">
+          <img src="../../assets/imgs/product-images/Group2.png" alt="" class="w-100">
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- PRODUCT SECTION-1 ENDS -->
+
+
+
+<!-- BLOGS SECTION-2 STARTS -->
+
+<div class="blog-section-2">
+  <div class="container blogs-co-2">
+    <h2 class="purple-text mb-3">All Blogs</h2>
+    <div class="row blogs-ro-2 justify-content-center">
+      <div class="col-sm-3 blogs-col-2" *ngFor="let blogs of bLogList">
+        <a href="/single-blog/{{blogs.id}}" style="text-decoration: none;">
+          <div class="card">
+            <img src="{{baseUrl+blogs.Image}}" alt="" class="card-img-top blog-img w-100">
+            <div class="card-body d-flex flex-column">
+              <p class="purple-p">{{blogs.Title}}</p>
+              <p class="text-p" style="font-size: 10px; font-weight: 900;">{{ blogs.Author }}</p>
+              <!-- <p class="text-p">{{blogs.Date | date: 'MMMM y'}}</p> -->
+              <p class="grey-text mb-0">{{blogs.ShortDescription | shortLength : 35 }}</p>
+              <!-- <p class="text-p" [innerHTML]="blogs.FullDescription | shortLength :70 "></p> -->
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BLOGS SECTION-2 ENDS -->

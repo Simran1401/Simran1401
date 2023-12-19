@@ -1,0 +1,83 @@
+<div class="backdrop" style="width: 100%;" (click)="onClose()"></div>
+
+
+<div id="startModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body start-form">
+        <div class="button-box">
+          <button type="button" class="btn-close" (click)="onClose()"></button>
+        </div>
+        <h2 class="purple-text">{{signUpModal? 'Let’s Start!': 'Welcome Back'}}</h2>
+        <div *ngIf="signUpModal">
+          <p class="text-p">Already have an account? <span (click)="goToLogIn()" class="link">Log In</span></p>
+          <form [formGroup]="signUpForm" (ngSubmit)="signUpFormSubmitted()" class="signUpform">
+            <div class="mb-3">
+              <input formControlName="email" type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="mb-3">
+              <input type="text" formControlName="phoneNumber" class="form-control" placeholder="Phone Number">
+            </div>
+            <div class="mb-3">
+              <input type="password" formControlName="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="mb-3">
+              <input type="password" formControlName="confirmPassword" class="form-control"
+                placeholder="Confirm Password">
+            </div>
+            <span style="color: red;" *ngIf="errorTextOnSignUp">{{ errorTextOnSignUp }}</span>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label purple-p" for="gridCheck">
+                By signing up, I agree to the Terms and Conditions and Privacy Policy
+              </label>
+            </div>
+            <button class="btn btn-purple w-100" type="submit">Register</button>
+          </form>
+        </div>
+        <div *ngIf="loginModal">
+          <form [formGroup]="logInForm" (ngSubmit)="logInFormSubmitted()" class="logInform">
+            <p class="text-p mb-0">Please login to your account.</p>
+            <p class="text-p">Log In with <span (click)="toLogInWithNumber()" class="link">Phone Number</span></p>
+            <div class="mb-3">
+              <input type="text" formControlName="username" class="form-control" id="formGroupExampleInput"
+                placeholder="Username">
+            </div>
+            <div class="mb-3">
+              <input type="password" formControlName="password" class="form-control" id="formGroupExampleInput3"
+                placeholder="Password">
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label purple-p" for="gridCheck">
+                Keep me logged in
+              </label>
+              <div style="color: red" *ngIf="errorTextLogIn">{{ errorTextLogIn }}</div>
+            </div>
+            <span style="font-size: 20px; color: rgb(77, 192, 77);" *ngIf="successMsg">{{ successMsg }}</span>
+            <button class="btn btn-purple w-100" type="submit">Log In</button>
+            <p class="text-p mt-3">Don’t have an account? <span (click)="goToSignUp()" class="link">Sign Up</span></p>
+          </form>
+        </div>
+        <div *ngIf="logInWithNumberModal">
+          <p class="text-p mb-0">Please login to your account.</p>
+          <p class="text-p">Log In with <span (click)="goToLogIn()" class="link">Email</span></p>
+          <form [formGroup]="logInWithNumberForm" (ngSubmit)="logInWithNumberFormSubmitted()" class="logInform">
+            <div class="mb-3">
+              <input type="tel" formControlName="mobile" class="form-control" placeholder="Phone Number">
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label purple-p" for="gridCheck">
+                Keep me logged in
+              </label>
+            </div>
+            <span *ngIf="errorTextLogIn">{{errorTextLogIn}}</span>
+            <button class="btn btn-purple w-100" type="submit">Send OTP</button>
+            <p class="text-p mt-3">Don’t have an account? <span (click)="goToSignUp()" class="link">Sign Up</span></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

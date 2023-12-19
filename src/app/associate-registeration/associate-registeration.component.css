@@ -1,0 +1,385 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.purple-text {
+  /* color: #BF089E; */
+  background: linear-gradient(90deg, #c408a2 0%, #2d0235 71.01%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.orange-btn {
+  background: linear-gradient(180deg, #ff9a47 0%, #9a3659 99.99%, #690661 100%);
+  border-radius: 10px;
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  padding: 0 20px;
+  height: 40px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.orange-btn:hover {
+  filter: none;
+  transition: 0.2s;
+  color: #fff;
+}
+
+.left-image-2 {
+  width: 20%;
+  position: absolute;
+  top: 103%;
+  left: -5%;
+  transform: translate(0, -100%);
+}
+
+.right-image-2 {
+  width: 75%;
+  position: absolute;
+  left: 100%;
+  transform: translate(-100%, 0);
+}
+
+.right-image-1 {
+  width: 33%;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transform: translate(-70%, -100%);
+}
+
+.img-sec-2 {
+  position: relative;
+}
+
+.btn-purple:focus {
+  box-shadow: 0 0 0 0.25rem rgb(105 6 97 / 18%);
+}
+
+.square-img {
+  width: 100%;
+  box-shadow: 0px 4px 15px rgb(0 0 0 / 25%);
+  border-radius: 25px;
+  height: 430px;
+  object-fit: cover;
+}
+
+.workshop-form {
+  background: #ffffff;
+  box-shadow: 0px 10px 34px rgba(0, 0, 0, 0.3);
+  border-radius: 14px;
+  width: 90%;
+  margin: auto;
+  padding: 30px 50px;
+}
+
+.workshop-form .form-control,
+.workshop-form .form-select {
+  border: 1px solid #2d0235;
+  border-radius: 6px;
+}
+
+.black-text {
+  color: #2d0235;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.fee-btn {
+  border: 2px solid #2d0235;
+  border-radius: 10px;
+  background: transparent;
+  padding: 5px 30px;
+  color: #2d0235;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.workshop-form .btn-purple {
+  padding: 5px 30px;
+  height: auto;
+  font-size: 23px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.workshop-form .form-check {
+  font-size: 14px;
+}
+
+.practitioner-form {
+  width: 75%;
+  background: linear-gradient(90.42deg, #690661 0.35%, #2d0235 99.63%);
+  box-shadow: 0px 8px 15px rgb(0 0 0 / 60%);
+  border-radius: 14px;
+  color: #fff;
+}
+
+.practitioner-form .col-md-4 {
+  width: 33%;
+}
+
+.practitioner-form .black-text {
+  color: #fff;
+}
+
+.practitioner-form .form-control,
+.practitioner-form .form-select {
+  background: transparent;
+  border: 1px solid #fff;
+}
+
+.practitioner-form .form-check-input {
+  border-radius: 0;
+  background: transparent;
+  border: 1px solid #fff;
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.25rem rgb(47 2 54 / 32%);
+}
+
+.practitioner-form .fee-btn {
+  border-color: #fff;
+  color: #fff;
+}
+
+.pract-card-5 {
+  border: none;
+  background: linear-gradient(90.42deg, #690661 0.35%, #2d0235 99.63%);
+  box-shadow: 0px 8px 15px rgb(0 0 0 / 60%);
+  border-radius: 14px;
+  padding: 30px;
+  width: 70%;
+  margin: auto;
+  color: #fff;
+}
+
+.pract-card-5 .table {
+  width: 100%;
+  margin: auto;
+  border: 2px solid #ffffff;
+  color: #fff;
+}
+
+.practitioner-section-5 {
+  padding-bottom: 50px;
+}
+
+#sec-2-hidden-img {
+  display: none;
+}
+
+.workshop-d-section-6 {
+  padding-bottom: 80px;
+}
+
+.btn-purple {
+  background: #690661;
+  border-radius: 10px;
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  height: 40px;
+  color: #ffffff;
+  padding: 0 20px;
+}
+
+.btn-purple:hover {
+  color: #fff;
+  transition: 0.2s;
+  filter: none;
+}
+
+.home-section-1 {
+  padding: 50px 0 80px 0;
+}
+
+.img-sec-1 {
+  position: relative;
+}
+
+.img-1,
+.img-2 {
+  display: flex;
+}
+
+.img-1 img,
+.img-2 img {
+  /* height: fit-content; */
+  /* width: 100%; */
+}
+
+.content-part-1 {
+  padding-left: 50px;
+}
+
+.about-section-2 {
+  padding-bottom: 50px;
+}
+
+@media (max-width: 992px) {
+  .square-img {
+    height: 400px;
+  }
+
+  .img-sec-1 {
+    display: none;
+  }
+
+  .content-part-1 {
+    padding-left: 0;
+  }
+
+  .img-sec-2 {
+    width: 50%;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-section-2 {
+    padding-bottom: 50px;
+  }
+
+  .about-col-2-1 {
+    width: 100%;
+  }
+
+  .about-col-2-2 {
+    display: none;
+  }
+
+  #sec-2-hidden-img {
+    display: block;
+    width: 50%;
+  }
+
+  .home-section-1 .row {
+    justify-content: space-between;
+  }
+
+  .left-image-2 {
+    top: 100%;
+    left: -35%;
+  }
+
+  .right-image-2 {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 765px) {
+  .square-img {
+    height: 120px;
+    float: right;
+  }
+
+  .practitioner-form {
+    width: 95%;
+  }
+
+  .pract-card-5 {
+    overflow-x: scroll;
+    width: 100%;
+  }
+
+  .home-section-1 {
+    padding-bottom: 80px;
+  }
+
+  .left-image-2 {
+    display: none;
+  }
+
+  .content-sec-1 {
+    width: 50%;
+    padding-right: 0;
+  }
+
+  .orange-btn {
+    font-size: 12px;
+    border: none;
+    padding: 0 15px;
+    height: 30px;
+  }
+
+  .purple-text {
+    font-size: 15px;
+  }
+
+  .right-image-2 {
+    width: 95%;
+    left: 0;
+    transform: translate(0);
+  }
+
+  .text-p {
+    font-size: 11px;
+  }
+}
+
+/* PRACTITIONER SECTION ENDS */
+
+@media (max-width: 765px) {
+  .workshop-d-card {
+    width: 95%;
+  }
+
+  .workshop-form {
+    width: 95%;
+    padding: 20px 10px;
+  }
+
+  .workshop-form .col-md-3 {
+    width: 25%;
+    margin-top: 0;
+  }
+
+  .workshop-form .col-12 {
+    margin-top: 0;
+  }
+
+  .workshop-form .form-control,
+  .workshop-form .form-select {
+    font-size: 14px;
+  }
+
+  .workshop-form .form-check {
+    font-size: 12px;
+  }
+
+  .black-text {
+    font-size: 19px;
+  }
+
+  .fee-btn {
+    padding: 3px 15px;
+    color: #2d0235;
+    font-size: 15px;
+  }
+
+  .workshop-form .btn-purple {
+    padding: 3px 15px;
+    font-size: 15px;
+  }
+
+  .workshop-form .col-md-9 {
+    width: 75%;
+    margin-top: 0;
+  }
+
+  .workshop-form .col-md-6 {
+    width: 50%;
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,156 @@
+.button-box {
+  text-align: right;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translate(-100%,0);
+}
+
+.button-box .btn-close {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.start-form .purple-p {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.signUpform .ng-invalid.ng-touched,
+.logInform .ng-invalid.ng-touched {
+  border: 1px solid red;
+  box-shadow: 0 0 0 0.25rem rgb(255 0 0 / 7%);
+}
+
+.start-form .form-control {
+  border: 1px solid #483d53;
+  border-radius: 6px;
+}
+
+.start-form .purple-p {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.start-form {
+  padding: 40px 80px 40px 80px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 50;
+}
+
+.modal-dialog {
+  z-index: 51;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed !important;
+}
+
+.btn-purple {
+  background: #690661;
+  border-radius: 10px;
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  height: 40px;
+  color: #ffffff;
+  padding: 0 20px;
+}
+
+.btn-purple:hover {
+  color: #fff;
+  transition: 0.2s;
+  filter: none;
+}
+
+.btn-purple:focus {
+  box-shadow: 0 0 0 0.25rem rgb(105 6 97 / 18%);
+}
+
+.purple-text {
+  /* color: #BF089E; */
+  background: linear-gradient(90deg, #c408a2 19.48%, #2d0235 81.71%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 28px;
+  font-weight: 800;
+}
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.25rem rgb(47 2 54 / 32%);
+}
+
+.form-check-input:checked {
+  background-color: #690661;
+  border-color: #690661;
+}
+
+.link {
+  color: #c108a0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.btn-close:focus{
+  box-shadow: 0 0 0 0.25rem rgb(105 6 97 / 18%);
+}
+
+
+@media (max-width:992px) {
+  .start-form{
+    padding: 20px;
+  }
+}
+
+@media (max-width: 765px) {
+  .start-form .purple-text {
+    font-size: 30px;
+  }
+
+  .start-form {
+    padding: 1rem;
+  }
+
+  .start-form .purple-text {
+    font-size: 30px;
+  }
+
+  .text-p {
+    font-size: 11px;
+  }
+
+  .modal-dialog {
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    position: fixed !important;
+    width: 80%;
+  }
+
+  .start-form {
+    padding: 20px;
+  }
+
+  .form-control{
+    height: 30px;
+  }
+}
+
+@media (max-width:320px) {
+  .modal-dialog{
+      top: 55%;
+      left: 48%;
+      transform: translate(-51%, -50%);
+      position: fixed !important;
+      width: 95%;
+  }
+}

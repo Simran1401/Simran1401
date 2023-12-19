@@ -1,0 +1,134 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.purple-t {
+  color: #690661;
+  font-size: 19px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.wishlist {
+  padding: 80px 0;
+}
+
+.product-d-col-2 {
+  text-align: -webkit-center;
+}
+
+.product-d-col-2 img {
+  width: 100%;
+  height: 250px;
+  box-shadow: 0px 4px 15px rgb(0 0 0 / 25%);
+  border-radius: 20px;
+  /* object-fit: cover; */
+}
+
+.product-d-col-2 .bi-star-fill {
+  color: #00af07;
+}
+
+.purple-text {
+  /* color: #BF089E; */
+  background: linear-gradient(90deg, #c408a2 19.48%, #2d0235 81.71%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.jsb {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jsb .purple-text {
+  font-size: 20px;
+}
+
+.product-d-col-2 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-purple {
+  background: #690661;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 10px;
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  height: 40px;
+  color: #FFFFFF;
+  padding: 0 20px;
+}
+
+.btn-purple:focus {
+  box-shadow: 0 0 0 0.25rem rgb(105 6 97 / 18%);
+}
+
+.btn-purple:hover {
+  color: #fff;
+  transition: 0.2s;
+  filter: none;
+}
+
+@media (max-width:1024px) {
+  .product-d-col-2 img{
+    height: 200px;
+  }
+}
+
+@media (max-width:992px) {
+  .product-d-col-2 img{
+    height: 160px;
+  }
+
+  .product-d-col-2{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 765px) {
+  .product-d-ro-2 {
+    margin-bottom: 0;
+  }
+
+  .btn-purple {
+    font-size: 11px;
+    height: 30px;
+  }
+
+  .product-d-col-2 img{
+    height: 135px;
+  }
+
+  .purple-t {
+    font-size: 11px;
+  }
+
+  .product-d-section-2 {
+    padding-bottom: 50px;
+  }
+
+  .product-d-col-2 {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .jsb .purple-text {
+    font-size: 15px;
+  }
+
+  .btn-purple {
+    font-size: 11px;
+    height: 30px;
+  }
+}

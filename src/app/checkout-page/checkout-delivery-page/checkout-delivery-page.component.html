@@ -1,0 +1,61 @@
+<div class="checkout-section-2">
+    <div class="container checkout-co-2">
+        <div class="d-flex mb-3" style="align-items: center;">
+            <span class="purple-circle">1</span>
+            <h2 class="purple-text mb-0" style="padding-left: 10px;">Delivery Address</h2>
+        </div>
+        <div class="card checkout-card">
+            <p class="grey-text">Your Addresses</p>
+            <ul>
+                <li class="text-p" *ngFor="let address of addresses">{{address.address + ' ' + address.city + ' ' +
+                    address.state + ' ' + address.postcode}} &nbsp; <br class="d-sm-block d-md-none">
+                    <button class="btn btn-purple" (click)="useThisAddress(address)">Use this address</button>
+                </li>
+            </ul>
+            <button class="add" (click)="openForm()">+ Add New Address</button>
+            <div *ngIf="formOpen">
+                <p class="grey-text">New Address</p>
+                <form [formGroup]="checkOutDelivery" class="row g-3">
+                    <div class="col-12">
+                        <input type="text" class="form-control" formControlName="email" id="inputCountry"
+                            placeholder="Email">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" formControlName="name" id="inputName"
+                            placeholder="Full Name">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" formControlName="address" id="inputAddress"
+                            placeholder="Address">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" formControlName="city" id="inputCity"
+                            placeholder="City">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" formControlName="postcode" id="inputPin"
+                            placeholder="Pin Code">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" formControlName="state" id="inputState"
+                            placeholder="State">
+                    </div>
+                    <div class="col-12 mb-3">
+                        <input type="text" class="form-control" formControlName="phone" id="inputPhone"
+                            placeholder="Phone Number">
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-purple" (click)="checkOutCall()">Add And Proceed</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="d-flex da">
+            <button class="back-btn">BACK TO CART</button>
+            <!-- <button routerLink="../payment-method" class="btn btn-purple">Proceed</button> -->
+        </div>
+    </div>
+</div>
+
+<!-- CHECKOUT SECTION-2 ENDS -->

@@ -1,0 +1,35 @@
+<div class="faq-sec">
+  <div class="container">
+    <div class="heading text-center">
+      <h2 class="purple-text pb-4">
+        Freuently Asked Questions
+      </h2>
+      <!-- <p class="text-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.
+        Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.
+        Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per
+        conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar.
+        Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis
+        convallis diam sit amet lacinia. Aliquam in elementum tellus.</p> -->
+    </div>
+    <div class="heading">
+      <div class="accordion" id="accordionExample" *ngFor="let item of faqs; let i = index">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button {{i==0? '': 'collapsed'}}" type="button" data-bs-toggle="collapse"
+            attr.data-bs-target="#collapse{{i}}" data-bs-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              {{ item.Question }}
+            </button>
+          </h2>
+          <div id="collapse{{i}}" class="accordion-collapse collapse {{i == 0? 'show': ''}}" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong class="d-block">Answer</strong>
+              {{ item.Answer }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

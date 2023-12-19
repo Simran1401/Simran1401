@@ -1,0 +1,54 @@
+<!-- CHECKOUT SECTION-2 STARTS -->
+
+<div class="checkout-section-2">
+  <div class="container checkout-co-2">
+    <div class="d-flex mb-3" style="align-items: center;">
+      <span class="purple-circle">3</span>
+      <h2 class="purple-text mb-0" style="padding-left: 10px;">Place Order</h2>
+    </div>
+    <div class="card checkout-card">
+      <h2 *ngIf="errorText">Oops!! You might have removed everything from your cart :(</h2>
+      <div class="row checkout-ro-2" *ngIf="!errorText">
+        <div class="col-sm-6">
+          <p class="grey-text">Product</p>
+          <div class="column-1 mb-5" *ngFor="let prod of productsIncart">
+            <div class="row-1 po-img">
+              <img src="{{apiUrl + prod.image}}" alt="">
+              <div style="margin-left: 15px;">
+                <b class="black-p">{{ prod.name }}</b>
+                <br>
+                <br>
+                <!-- <p class="black-s-p mb-0" [innerHTML]="prod.description | shortLength: 40"></p> -->
+                <div class="row-3 d-flex">
+                  <form class="incdec" id="increase-1">
+                    <div class="value-button" id="decrease" (click)="decreaseValue(prod)" value="Decrease Value">-</div>
+                    <input type="number" id="number" value="{{prod.quantity}}" />
+                    <div class="value-button" id="increase" (click)="increaseValue(prod)" value="Increase Value">+</div>
+                  </form>
+                  <s class="purple-t" style="font-size: 15px;" *ngIf="prod.discount != 0">₹{{prod.price}}
+                  </s>
+                  <sup *ngIf="prod.discount != 0" style="line-height: 1;">{{prod.discount}}% OFF</sup>
+                  <b>₹{{ prod.discount != 0? ((prod.price -(prod.discount * prod.price) /100) * (prod.quantity) | number:'1.0-0'): (prod.price
+                    * prod.quantity | number:'1.0-0') }}</b>
+                  <div class="purple-text ps-3" style="font-size: 10px;" *ngIf="prod.discount == 0">FIXED PRICE
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <p class="grey-text">Delivery Address</p>
+          <p class="text-p">{{ address.address + ' ' + address.city + ' ' + address.state + ' ' + address.postcode }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex po">
+      <button class="btn btn-purple" [disabled]="errorText" (click)="placeOrder()">Place Order</button>
+      <span class="black-text">Order Total: ₹{{total}}</span>
+    </div>
+  </div>
+</div>
+
+<!-- CHECKOUT SECTION-2 ENDS -->

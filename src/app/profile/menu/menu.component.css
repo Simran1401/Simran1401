@@ -1,0 +1,69 @@
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.purple-p {
+    color: #690661;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.purple-text {
+    /* color: #BF089E; */
+    background: linear-gradient(90deg, #c408a2 19.48%, #2d0235 81.71%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* text-fill-color: transparent; */
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.personal-col-1-1 {
+    list-style: none;
+}
+
+.personal-col-1-1 .purple-p {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.personal-col-1-1 ul {
+    margin-top: 20px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.personal-col-1-1 ul li {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.personal-col-1-1 ul li:hover {
+    background: rgba(105, 6, 97, 0.15);
+    transition: 0.3s;
+}
+
+.pp-active {
+    background: rgba(105, 6, 97, 0.15);
+}
+
+
+.confetti {
+    width: 3%;
+}
+
+
+svg {
+    margin: 0 10px;
+}
+
+/* @media (max-width:992px) {}
+
+@media (max-width:768px) {} */
+
+/* PERSONAL-DETAILS SECTION ENDS */
+
+/* PERSONAL-DETAILS SECTION ENDS */

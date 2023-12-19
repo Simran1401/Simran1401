@@ -1,0 +1,47 @@
+.tabs {
+  display: inline;
+  color: #2d0235;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.selectedTab {
+  color: #690661;
+  text-decoration: underline;
+}
+
+.purple-text {
+  /* color: #BF089E; */
+  background: linear-gradient(90deg, #c408a2 19.48%, #2d0235 81.71%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.product-co-2 ul {
+  padding-left: 0;
+}
+
+@media (max-width:992px) {
+
+  .product-co-2 ul {
+    display: flex;
+    overflow-x: scroll;
+  }
+
+}
+
+@media (max-width: 760px) {
+  .purple-text {
+    font-size: 15px;
+  }
+
+  .tabs {
+    font-size: 12px;
+  }
+}

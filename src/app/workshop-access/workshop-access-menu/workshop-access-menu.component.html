@@ -1,0 +1,9 @@
+<div class="product-section-2">
+  <div class="container product-co-2">
+    <h2 class="purple-text">Programs</h2>
+    <ul class="my-4">
+      <li routerLinkActive="selectedTab" class="tabs" routerLink="all-programs">All Programmes</li>
+      <li class="tabs" routerLinkActive="selectedTab" routerLink="dy-workshopProgram/{{category.id}}" *ngFor="let category of categories">{{ category.Title }}</li>
+    </ul>
+  </div>
+</div>
